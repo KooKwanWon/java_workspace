@@ -29,4 +29,25 @@ public class CastingPractice {
 		System.out.println(a + " unicode : " + (int)first);
 		System.out.println((char)second + " unicode : " + (int)(first+1));
 	}
+	public void method2() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("국어 : ");
+		int korean = sc.nextInt();
+		
+		System.out.print("영어 : ");
+		int english = sc.nextInt();
+		
+		System.out.print("수학 : ");
+		int math = sc.nextInt();
+		
+		int sum = korean+english+math;
+		double avr = sum/3.0;
+		
+		
+		System.out.println("총점 : " + sum);
+		System.out.printf("평균 : %.2f", avr);
+		
+	}
 }

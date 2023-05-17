@@ -72,7 +72,7 @@ public class VariablePractice {
 		
 		
 		char first = a.charAt(0);
-		char last = a.charAt(7);
+		char last = a.charAt(a.length() -1);
 		
 		System.out.println("첫번째 문자 : " + first);
 		System.out.println("마지막 문자 : " + last);
