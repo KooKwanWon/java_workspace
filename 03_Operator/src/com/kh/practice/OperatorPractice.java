@@ -92,9 +92,8 @@ public class OperatorPractice {
 
 	public void method6() {
 	
-		int apple = 0;
-		int basket =0;
-		
+		int apple, basket, need = 0;
+						
 		Scanner sc = new Scanner(System.in);
 		System.out.print("사과의 개수 : " );
 		apple = sc.nextInt();
@@ -102,6 +101,9 @@ public class OperatorPractice {
 		System.out.print("바구니의 크기 : " );
 		basket = sc.nextInt();
 		
-		System.out.println("필요한 바구니의 수 : " + (apple % basket == 0 ? apple / basket : apple / basket + 1));
+		need = (apple + basket -1) / basket;
+		
+		System.out.println("필요한 바구니의 수 : " + need);
 	}
+	
 }
