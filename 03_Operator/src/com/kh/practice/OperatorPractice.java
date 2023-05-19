@@ -95,10 +95,10 @@ public class OperatorPractice {
 		int apple, basket, need = 0;
 						
 		Scanner sc = new Scanner(System.in);
-		System.out.print("사과의 개수 : " );
+		System.out.print("사과의 개수 : ");
 		apple = sc.nextInt();
 		
-		System.out.print("바구니의 크기 : " );
+		System.out.print("바구니의 크기 : ");
 		basket = sc.nextInt();
 		
 		need = (apple + basket -1) / basket;
