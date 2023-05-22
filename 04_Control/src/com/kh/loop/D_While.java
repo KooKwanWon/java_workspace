@@ -174,9 +174,7 @@ public class D_While {
 //		d.method4();
 //		d.method5();
 		d.method6();
-//		d.method5();
-//		d.method5();
-//		d.method5();
+
 
 	}
 
