@@ -24,24 +24,18 @@ class LoopPractice {
 
 		int sum = 0;
 
-		for (int i = 1; ; i++) {
-			
-			
-			
+		for (int i = 1;; i++) {
+
 			if (i % 2 == 1 && sum < 100) {
-				 sum += i;
-			} 
-			else if (i % 2 == 0 && sum < 100) {
+				sum += i;
+			} else if (i % 2 == 0 && sum < 100) {
 				sum -= i;
-			}
-			else
-				{System.out.println(i-1 + "까지 더 했을때 " + "합은 : "+ sum);
+			} else {
+				System.out.println(i - 1 + "까지 더 했을때 " + "합은 : " + sum);
 				break;
-				}
+			}
 		}
 	}
-
-	
 
 	/*
 	 * 사용자로부터 문자열을 입력 받고 문자열에서 검색될 문자를 입력 받아 해당 문자열에 그 문자가 몇 개 있는지 개수를 출력하세요.
@@ -55,25 +49,36 @@ class LoopPractice {
 
 		int i = 0;
 		int j = 0;
-		
+
 		System.out.print("문자열 : ");
 		String word = sc.nextLine();
 		System.out.print("문자 : ");
 		char al = sc.next().charAt(0);
-		
-		for(i = 0; i < word.length(); i++) {
-			if(al == word.charAt(i)){
+
+		for (i = 0; i < word.length(); i++) {
+			if (al == word.charAt(i)) { // 오호~ 역시 잘하셨음! GOOD! 
 				j++;
 			}
 		}
-		System.out.println(word +" 안에 포함된 a 개수 : " + j);
+		System.out.println(word + " 안에 포함된 a 개수 : " + j);
 	}
 
 	/*
-	 * 0이 나올 때까지 숫자를 출력하시오. (random 사용!) 7 3 4 2 3 4 0 (1~10)
+	 * 0이 나올 때까지 숫자를 출력하시오. (random 사용!) 7 3 4 2 3 4 0 (0~9)
 	 */
 	public void method4() {
 
+		for (int i = 0;; i++) {
+
+			double num = Math.random() * 10; // 요렇게 되면 0~9까지잖아요~~ 0~10까지라면? 
+
+			if ((int) num != 0) {
+				System.out.print((int) num);
+			} else {
+				System.out.print((int) num);
+				break;
+			}
+		}
 	}
 
 	/*
@@ -83,6 +88,35 @@ class LoopPractice {
 	 * 
 	 */
 	public void method5() {
+
+		int one = 0;
+		int two = 0;
+		int three = 0;
+		int four = 0;
+		int five = 0;
+		int six = 0;
+
+		for (int i = 0; i < 10; i++) {
+
+			int num = (int) ((Math.random() * 10 + 1) / 2 + 1); // 위에서 0~10까지를 해보면 여기 부분을 더 간편하게 바꿀 수 있어요~ 
+
+			if (num == 1) {
+				one++;
+			} else if (num == 2) {
+				two++;
+			} else if (num == 3) {
+				three++;
+			} else if (num == 4) {
+				four++;
+			} else if (num == 5) {
+				five++;
+			} else if (num == 6) {
+				six++;
+			}
+		}
+
+		System.out.println(
+				"1 : " + one + ", 2 : " + two + ", 3 : " + three + ", 4 : " + four + ", 5 : " + five + ", 6 : " + six);
 
 	}
 
@@ -99,6 +133,80 @@ class LoopPractice {
 	 */
 	public void method6() {
 
+		String rsp = "";
+		int rsp_num = 0;
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("당신의 이름을 입력해주세요 : ");
+		String name = sc.nextLine();
+		
+				
+		while (true) {
+			
+			System.out.print("가위바위보 : ");
+			rsp = sc.nextLine();
+			
+			int computer = (int)((Math.random() * 3) + 1); // 여기서는 하셨구만! 위에 문제 random 범위 꼭 지정해봐요!
+			
+			if (rsp.equals("바위")) {
+				rsp_num = 1;
+				
+				if((rsp_num-computer) == -1) {
+					System.out.println("컴퓨터 : 가위  " +name + " : "+ rsp + " 이겼습니다 !");
+					a++;
+					break;
+				}
+				else if((rsp_num-computer) == -2) {
+					System.out.println("컴퓨터 : 보  " +name + " : "+ rsp + " 졌습니다 ㅠㅠ");
+					b++;
+				}
+				else if((rsp_num-computer) == 0) {
+					System.out.println("컴퓨터 : 바위  " +name + " : "+ rsp + " 비겼습니다.");
+					c++;
+				}
+			} 
+			
+			else if (rsp.equals("가위")) {
+				rsp_num = 2;
+				
+				if((rsp_num-computer) == -1) {
+					System.out.println("컴퓨터 : 보  " +name + " : "+ rsp + " 이겼습니다 !");
+					a++;
+					break;
+				}
+				else if((rsp_num-computer) == 1) {
+					System.out.println("컴퓨터 : 바위  " +name + " : "+ rsp + " 졌습니다 ㅠㅠ");
+					b++;
+				}
+				else if((rsp_num-computer) == 0) {
+					System.out.println("컴퓨터 : 가위  " +name + " : "+ rsp + " 비겼습니다.");
+					c++;
+				}
+			} 
+			
+			else if (rsp.equals("보")) {
+				rsp_num = 3;
+				
+				if((rsp_num-computer) == 2) {
+					System.out.println("컴퓨터 : 바위  " +name + " : "+ rsp + " 이겼습니다 !");
+					a++;
+					break;
+				}
+				else if((rsp_num-computer) == 1) {
+					System.out.println("컴퓨터 : 가위  " +name + " : "+ rsp + " 졌습니다 ㅠㅠ");
+					b++;
+				}
+				else if((rsp_num-computer) == 0) {
+					System.out.println("컴퓨터 : 보  " +name + " : "+ rsp + " 비겼습니다.");
+					c++;
+				}
+			}
+		}
+		System.out.println("승 "+ a + "번, " +"패 "+ b + "번, " +"무승부 "+ c + "번");
 	}
 
 	public static void main(String[] args) {
@@ -107,9 +215,9 @@ class LoopPractice {
 
 //		l.method1();
 //		l.method2();
-		l.method3();
+//		l.method3();
 //		l.method4();
 //		l.method5();
-//		l.method6();
+		l.method6();
 	}
 }
