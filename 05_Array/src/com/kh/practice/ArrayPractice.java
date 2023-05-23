@@ -12,7 +12,7 @@ public class ArrayPractice {
 	 * */
 	public void method1() {
 		
-		String[] arr = new String[5];
+		String[] arr = {"가", "나", "다", "라", "마"};
 		
 		arr[0] = "사과";
 		arr[1] = "바나나";
@@ -21,13 +21,6 @@ public class ArrayPractice {
 		arr[4] = "딸기";
 		
 		System.out.println(arr[4]);
-		
-		
-//		for(int i = 0; i < arr.length; i++) {
-//			arr[i] 
-			
-		
-		
 		
 	}
 	
@@ -46,8 +39,6 @@ public class ArrayPractice {
 	 * */
 	public void method2() {
 		
-		
-		
 		System.out.println("정수 : ");
 		int a = sc.nextInt();
 		
@@ -65,7 +56,6 @@ public class ArrayPractice {
 		System.out.println(sum);
 
 	}
-	
 	
 	/*
 	 * 음식 메뉴는 자유롭게! 개수도 자유롭게! 배열 사용해서
@@ -104,12 +94,10 @@ public class ArrayPractice {
 	 * */
 	public void method4() {
 		
-		
 		System.out.println("주민등록번호 : ");
 		String a = sc.nextLine();
 		int i = 0;
 		int j = 0;
-		int k = 0;
 		
 		String[] number = new String[a.length()];
 		
@@ -118,16 +106,15 @@ public class ArrayPractice {
 		}	
 		
 		String number2[] = new String[number.length];
-		for(j =0 ; i < number.length; j++) {
-		number2[j] = number[j];
-		}	
+		number2 = Arrays.copyOf(number, number.length);
 		
-		for(k =0 ; k < number2.length; k++) {
-			if(k<8) {System.out.print(number)}
-			
+		for(j =0 ; j < number2.length; j++) {
+			if(j<8) {System.out.print(number2[j]);
+				}
+			else
+				System.out.print("*");
 			
 		}
-		
 	}
 	
 	/*
@@ -145,7 +132,6 @@ public class ArrayPractice {
 		
 		String[] word = new String[a.length()]; 
 		
-		
 		for(i =0; i<a.length(); i++) {
 			word[i] = String.valueOf(a.charAt(i));
 		}
@@ -161,8 +147,8 @@ public class ArrayPractice {
 //		a.method1();
 //		a.method2();
 //		a.method3();
-		a.method4();
-//		a.method5();
+//		a.method4();
+		a.method5();
 		
 		
 		
