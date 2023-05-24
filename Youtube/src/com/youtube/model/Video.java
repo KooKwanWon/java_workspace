@@ -12,15 +12,30 @@ public class Video {
 	public String fileUrl;
 	
 	
-	public void upload(){}
+	public Video upload(){
+		
+		return null;
+	}
 	
-	public void videoList(){}
+	public Video[] videoList(){
+		
+		return null;
+	}
+		
 	
-	public void viewVideo(){}
+	public Video viewVideo(){
+		return null;
+	}
 
-	public void updateVideo(){}
+	public Video updateVideo(){
+		return null;
+		
+	}
 	
-	public void deleteVideo(){}
+	public boolean deleteVideo(){
+		
+		return false;
+	}
 	
 	
 //	영상 업로드

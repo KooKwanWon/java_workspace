@@ -1,20 +1,17 @@
 package com.kakaotalk;
 
-import com.kakaotalk.model.User;
+import java.util.Scanner;
+
+import com.kakaotalk.model.Mainmenu;
+
 
 public class Application {
 
+	
 	public static void main(String[] args) {
 
-		User koo = new User();
-		
-		if(koo.ing == true) {
-			koo.viewProfile();
-		}
-		else {
-			koo.login();
-		}
-		
+		Mainmenu mm = new Mainmenu();
+		mm.menu();
 	}
 
 }

@@ -17,9 +17,15 @@ public class User {
 //	Update (갱신): 데이터베이스에 저장된 데이터를 업데이트하거나 수정합니다. //프로필수정
 
 //	Delete (삭제): 데이터베이스에서 데이터를 삭제합니다.               //계정삭제
-	public void login(){}
-	
-	public void signUp(){}
+	public boolean login(){
+		
+		return false;
+	}
+		
+	public boolean signUp(){
+		
+		return false;
+	}
 	
 	public void viewProfile(){}
 
