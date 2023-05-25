@@ -4,38 +4,80 @@ import java.util.Date;
 
 public class Video {
 
-	public String title;
-	public String comment;
-	public Date uploadAt;
-	public int count;
-	public String imgUrl;
-	public String fileUrl;
+	private String title;
+	private String comment;
+	private Date uploadAt;
+	private int count;
+	private String imgUrl;
+	private String fileUrl;
 	
-	
-	public Video upload(){
-		
-		return null;
-	}
-	
-	public Video[] videoList(){
-		
-		return null;
-	}
-		
-	
-	public Video viewVideo(){
-		return null;
+	public Video() {
 	}
 
-	public Video updateVideo(){
-		return null;
-		
+	public Video(String title, String comment, Date uploadAt, int count, String imgUrl, String fileUrl) {
+		this.title = title;
+		this.comment = comment;
+		this.uploadAt = uploadAt;
+		this.count = count;
+		this.imgUrl = imgUrl;
+		this.fileUrl = fileUrl;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public Date getUploadAt() {
+		return uploadAt;
+	}
+
+	public void setUploadAt(Date uploadAt) {
+		this.uploadAt = uploadAt;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
+	public String getFileUrl() {
+		return fileUrl;
+	}
+
+	public void setFileUrl(String fileUrl) {
+		this.fileUrl = fileUrl;
+	}
+
+	
+	public String toString() {
+		return "Video [title=" + title + ", comment=" + comment + ", uploadAt=" + uploadAt + ", count=" + count
+				+ ", imgUrl=" + imgUrl + ", fileUrl=" + fileUrl + "]";
 	}
 	
-	public boolean deleteVideo(){
-		
-		return false;
-	}
+	
 	
 	
 //	영상 업로드

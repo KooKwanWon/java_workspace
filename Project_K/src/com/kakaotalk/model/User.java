@@ -27,11 +27,7 @@ public class User {
 		System.out.print("[회원가입] 비밀번호 입력 : ");
 		String n_password = sc.nextLine();
 		password = n_password;
-
-		System.out.print("[회원가입] 전화번호 입력(-없이 입력) : ");
-		String n_phone = sc.nextLine();
-		phone = n_phone;
-
+		
 		System.out.print("[회원가입] 프로필 사진 등록 : ");
 		String n_img = sc.nextLine();
 		img = n_img;

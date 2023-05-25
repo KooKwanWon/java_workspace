@@ -1,114 +1,37 @@
-package com.kakaotalk.model;
+package com.kakaotalk.controller;
 
-import java.util.Arrays;
+import com.kakaotalk.model.Friend;
 
-public class Friend {
 
+public class FriendController {
+
+	private Friend f = new Friend();
 	
-	private String f_list; //[] = { "비어있음", "비어있음", "비어있음", "비어있음", "비어있음" }; //
-	private String fname; //
-	private int menuchoice; //
-	private int choice; //
-	private int add; //
-	private int add_line; //
-	private int d_line; //
+	public FriendController() {}
 	
-	
-	public Friend() {
+	public boolean saveData(Friend f) {
+		
+		this.f.setF_list(f.getF_list());
+		this.f.setFname(f.getFname());
+		this.f.setMenuchoice(f.getMenuchoice());
+		this.f.setChoice(f.getChoice());
+		this.f.setAdd(f.getAdd());
+		this.f.setAdd_line(f.getAdd_line());
+		this.f.setD_line(f.getD_line());
+		
+		return true;
 	}
 	
+	public Friend confirmData() {
 	
-	public Friend(String f_list, String fname, int menuchoice, int choice, int add, int add_line, int d_line) {
-		this.f_list = f_list;
-		this.fname = fname;
-		this.menuchoice = menuchoice;
-		this.choice = choice;
-		this.add = add;
-		this.add_line = add_line;
-		this.d_line = d_line;
+		return this.f;
 	}
-
-
 	
-	public String getF_list() {
-		return f_list;
+	public void Sum() {
+		
+		System.out.println(f.getF_list() + f.getFname());
 	}
-
-	public void setF_list(String f_list) {
-		this.f_list = f_list;
-	}
-
-
-	
-	public String getFname() {
-		return fname;
-	}
-
-	public void setFname(String fname) {
-		this.fname = fname;
-	}
-
-
-	
-	public int getMenuchoice() {
-		return menuchoice;
-	}
-
-	public void setMenuchoice(int menuchoice) {
-		this.menuchoice = menuchoice;
-	}
-
-	
-
-	public int getChoice() {
-		return choice;
-	}
-
-	public void setChoice(int choice) {
-		this.choice = choice;
-	}
-
-	
-
-	public int getAdd() {
-		return add;
-	}
-
-	public void setAdd(int add) {
-		this.add = add;
-	}
-
-
-	public int getAdd_line() {
-		return add_line;
-	}
-
-	public void setAdd_line(int add_line) {
-		this.add_line = add_line;
-	}
-
-	
-
-	public int getD_line() {
-		return d_line;
-	}
-
-	public void setD_line(int d_line) {
-		this.d_line = d_line;
-	}
-
-	
-	
-	public String toString() {
-		return "Friend [f_list=" + f_list + ", fname=" + fname + ", menuchoice=" + menuchoice
-				+ ", choice=" + choice + ", add=" + add + ", add_line=" + add_line + ", d_line=" + d_line + "]";
-	}
-
-
-	
-	
-	
-	
+//	
 //	public void f_menu() {
 //
 //		System.out.print("[친구] 원하는 메뉴를 선택해 주세요" + "\n" + " 1.친구목록  2.친구관리  3.전체 메뉴로 가기 : ");
@@ -193,4 +116,7 @@ public class Friend {
 //		
 //		System.out.println("[삭제 완료]");
 //	}
+//	
+
+	
 }
