@@ -3,7 +3,6 @@ package com.kakaotalk.model;
 import java.util.Arrays;
 
 public class Friend {
-
 	
 	private String f_list; //[] = { "비어있음", "비어있음", "비어있음", "비어있음", "비어있음" }; //
 	private String fname; //
@@ -12,7 +11,6 @@ public class Friend {
 	private int add; //
 	private int add_line; //
 	private int d_line; //
-	
 	
 	public Friend() {
 	}
@@ -27,23 +25,19 @@ public class Friend {
 		this.add_line = add_line;
 		this.d_line = d_line;
 	}
-
-
+	
 	
 	public String getF_list() {
 		return f_list;
 	}
-
 	public void setF_list(String f_list) {
 		this.f_list = f_list;
 	}
 
 
-	
 	public String getFname() {
 		return fname;
 	}
-
 	public void setFname(String fname) {
 		this.fname = fname;
 	}
@@ -53,17 +47,14 @@ public class Friend {
 	public int getMenuchoice() {
 		return menuchoice;
 	}
-
 	public void setMenuchoice(int menuchoice) {
 		this.menuchoice = menuchoice;
 	}
-
 	
 
 	public int getChoice() {
 		return choice;
 	}
-
 	public void setChoice(int choice) {
 		this.choice = choice;
 	}
@@ -73,7 +64,6 @@ public class Friend {
 	public int getAdd() {
 		return add;
 	}
-
 	public void setAdd(int add) {
 		this.add = add;
 	}
@@ -82,17 +72,14 @@ public class Friend {
 	public int getAdd_line() {
 		return add_line;
 	}
-
 	public void setAdd_line(int add_line) {
 		this.add_line = add_line;
 	}
 
-	
 
 	public int getD_line() {
 		return d_line;
 	}
-
 	public void setD_line(int d_line) {
 		this.d_line = d_line;
 	}
