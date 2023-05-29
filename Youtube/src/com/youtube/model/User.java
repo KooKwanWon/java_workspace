@@ -9,6 +9,8 @@ public class User {
 	private String nickName ;
 	private char gender;
 	
+	Video video;
+	
 	public User() {}
 
 	public User(String email, String phone, String id, String pwd, String nickName, char gender) {
