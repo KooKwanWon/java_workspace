@@ -14,7 +14,7 @@ public class Circle extends Point {
 	
 	public Circle(int x, int y, int radius) {
 		super(x, y);
-		this.radius = radius;
+		this.radius =radius;
 	}
 
 
