@@ -8,22 +8,41 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		int[] num = new int[30];
+		
+		int a = Integer.parseInt(sc.nextLine());
 
-		for (int i = 0; i < num.length; i++) {
-			num[i] = i + 1;
+		String[] score = new String[a];
+		int[] last = new int[a];
+
+		for (int i = 0; i < a; i++) {
+			score[i] = sc.nextLine();
+		}
+//		
+		for(int l = 0; l < a; l++) {
+			int sum = 0;
+		for (int j = 0; j < score[0].length(); j++) {
+
+			if (score[l].charAt(j) == 'O') {
+				sum++;
+						
+				if (j!=0 && score[l].charAt(j-1) == 'O') {
+					sum++; 
+				}
+				else if(j==0) {
+					sum++; 
+				}
+			
+			} 
+			else if (score[l].charAt(j) == 'X') {
+				sum += 0;
+			}
+			last[l] = sum;
 		}
 		
-		for (int j = 1; j < 29; j++) {
-			int a = sc.nextInt();
-			num[a - 1] = 0;
 		}
-
-		for (int z = 0; z < num.length; z++) {
-			if (num[z] != 0) {
-				System.out.println(num[z]);
-			}
+		for (int l = 0; l < last.length; l++) {
+			System.out.println(last[l]);
 		}
-
+		
 	}
 }
