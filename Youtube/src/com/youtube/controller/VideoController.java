@@ -1,32 +1,35 @@
 package com.youtube.controller;
 
+import com.youtube.model.User;
 import com.youtube.model.Video;
 
-public class VideoController {
+public class VideoController implements UserControllerImpl {
 
-	public Video upload(){
-		
-		return null;
-	}
-	
-	public Video[] videoList(){
-		
-		return null;
-	}
-		
-	
-	public Video viewVideo(){
-		return null;
-	}
-
-	public Video updateVideo(){
-		return null;
-		
-	}
-	
-	public boolean deleteVideo(){
-		
+	@Override
+	public boolean login() {
 		return false;
 	}
+
+	@Override
+	public boolean signUp() {
+		return false;
+	}
+
+	@Override
+	public User ViewProfile() {
+		return null;
+	}
+
+	@Override
+	public User updateProfile() {
+		return null;
+	}
+
+	@Override
+	public boolean deleteVideo() {
+		return false;
+	}
+
+	
 	
 }

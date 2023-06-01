@@ -1,22 +1,34 @@
 package com.youtube.controller;
 
-public class UserController {
+import com.youtube.model.User;
 
-	
-	public boolean login(){
-		
+public class UserController implements UserControllerImpl{
+
+	@Override
+	public boolean login() {
 		return false;
 	}
-		
-	public boolean signUp(){
-		
+
+	@Override
+	public boolean signUp() {
 		return false;
 	}
-	
-	public void viewProfile(){}
 
-	public void updateProfile(){}
+	@Override
+	public User ViewProfile() {
+		return null;
+	}
+
+	@Override
+	public User updateProfile() {
+		return null;
+	}
+
+	@Override
+	public boolean deleteVideo() {
+		return false;
+	}
+
 	
-	public void deleteProfile(){}
 	
 }
