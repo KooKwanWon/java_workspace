@@ -1,35 +1,39 @@
 package com.youtube.controller;
 
-import com.youtube.model.User;
+import java.util.ArrayList;
+
 import com.youtube.model.Video;
 
-public class VideoController implements UserControllerImpl {
-
-	@Override
-	public boolean login() {
-		return false;
+public class VideoController {
+	
+	ArrayList<Video> videoList = new ArrayList<>();
+	
+	public void upload(Video video) { // 영상 업로드
+		videoList.add(video);
 	}
 
-	@Override
-	public boolean signUp() {
-		return false;
+	public ArrayList<Video> videoList() { // 동영상 목록
+		return videoList;
 	}
 
-	@Override
-	public User ViewProfile() {
-		return null;
+	public Video viewVideo(int index) { // 동영상 1개 보기
+		return videoList.get(index);
 	}
 
-	@Override
-	public User updateProfile() {
-		return null;
+	public void updateVideo(int index, Video video) {
+		videoList.set(index, video);
 	}
 
-	@Override
-	public boolean deleteVideo() {
-		return false;
+	public boolean deleteVideo(Video video) {
+		return videoList.remove(video);
 	}
-
+	
+	/*
+	 * Create : 추가
+	 * Read : 읽기 (1개, 목록)
+	 * Update : 수정
+	 * Delete : 삭제
+	 * */
 	
 	
 }

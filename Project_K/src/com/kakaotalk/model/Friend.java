@@ -2,98 +2,107 @@ package com.kakaotalk.model;
 
 import java.util.Arrays;
 
-public class Friend {
-	
-	private String f_list; //[] = { "비어있음", "비어있음", "비어있음", "비어있음", "비어있음" }; //
-	private String fname; //
-	private int menuchoice; //
-	private int choice; //
-	private int add; //
-	private int add_line; //
-	private int d_line; //
-	
-	public Friend() {
-	}
-	
-	
-	public Friend(String f_list, String fname, int menuchoice, int choice, int add, int add_line, int d_line) {
-		this.f_list = f_list;
-		this.fname = fname;
-		this.menuchoice = menuchoice;
-		this.choice = choice;
-		this.add = add;
-		this.add_line = add_line;
-		this.d_line = d_line;
-	}
-	
-	
-	public String getF_list() {
-		return f_list;
-	}
-	public void setF_list(String f_list) {
-		this.f_list = f_list;
-	}
 
 
-	public String getFname() {
-		return fname;
-	}
-	public void setFname(String fname) {
-		this.fname = fname;
-	}
 
 
-	
-	public int getMenuchoice() {
-		return menuchoice;
-	}
-	public void setMenuchoice(int menuchoice) {
-		this.menuchoice = menuchoice;
-	}
-	
-
-	public int getChoice() {
-		return choice;
-	}
-	public void setChoice(int choice) {
-		this.choice = choice;
-	}
-
-	
-
-	public int getAdd() {
-		return add;
-	}
-	public void setAdd(int add) {
-		this.add = add;
-	}
 
 
-	public int getAdd_line() {
-		return add_line;
-	}
-	public void setAdd_line(int add_line) {
-		this.add_line = add_line;
-	}
 
 
-	public int getD_line() {
-		return d_line;
-	}
-	public void setD_line(int d_line) {
-		this.d_line = d_line;
-	}
-
-	
-	
-	public String toString() {
-		return "Friend [f_list=" + f_list + ", fname=" + fname + ", menuchoice=" + menuchoice
-				+ ", choice=" + choice + ", add=" + add + ", add_line=" + add_line + ", d_line=" + d_line + "]";
-	}
-
-
-	
-	
+//
+//public class Friend {
+//	
+//	private String f_list; //[] = { "비어있음", "비어있음", "비어있음", "비어있음", "비어있음" }; //
+//	private String fname; //
+//	private int menuchoice; //
+//	private int choice; //
+//	private int add; //
+//	private int add_line; //
+//	private int d_line; //
+//	
+//	public Friend() {
+//	}
+//	
+//	
+//	public Friend(String f_list, String fname, int menuchoice, int choice, int add, int add_line, int d_line) {
+//		this.f_list = f_list;
+//		this.fname = fname;
+//		this.menuchoice = menuchoice;
+//		this.choice = choice;
+//		this.add = add;
+//		this.add_line = add_line;
+//		this.d_line = d_line;
+//	}
+//	
+//	
+//	public String getF_list() {
+//		return f_list;
+//	}
+//	public void setF_list(String f_list) {
+//		this.f_list = f_list;
+//	}
+//
+//
+//	public String getFname() {
+//		return fname;
+//	}
+//	public void setFname(String fname) {
+//		this.fname = fname;
+//	}
+//
+//
+//	
+//	public int getMenuchoice() {
+//		return menuchoice;
+//	}
+//	public void setMenuchoice(int menuchoice) {
+//		this.menuchoice = menuchoice;
+//	}
+//	
+//
+//	public int getChoice() {
+//		return choice;
+//	}
+//	public void setChoice(int choice) {
+//		this.choice = choice;
+//	}
+//
+//	
+//
+//	public int getAdd() {
+//		return add;
+//	}
+//	public void setAdd(int add) {
+//		this.add = add;
+//	}
+//
+//
+//	public int getAdd_line() {
+//		return add_line;
+//	}
+//	public void setAdd_line(int add_line) {
+//		this.add_line = add_line;
+//	}
+//
+//
+//	public int getD_line() {
+//		return d_line;
+//	}
+//	public void setD_line(int d_line) {
+//		this.d_line = d_line;
+//	}
+//
+//	
+//	
+//	public String toString() {
+//		return "Friend [f_list=" + f_list + ", fname=" + fname + ", menuchoice=" + menuchoice
+//				+ ", choice=" + choice + ", add=" + add + ", add_line=" + add_line + ", d_line=" + d_line + "]";
+//	}
+//
+//
+//	
+//	
 	
 	
 //	public void f_menu() {
@@ -180,4 +189,4 @@ public class Friend {
 //		
 //		System.out.println("[삭제 완료]");
 //	}
-}
+//}

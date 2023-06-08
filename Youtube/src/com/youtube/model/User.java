@@ -1,28 +1,18 @@
 package com.youtube.model;
 
+import java.util.List;
+
 public class User {
 
 	private String email;
-	private String phone ;
-	private String id ;
-	private String pwd ;
-	private String nickName ;
+	private String phone;
+	private String id;
+	private String password;
+	private String nickName;
 	private char gender;
 	
-	Video video;
-	
-	public User() {}
+	private List<Video> videos;
 
-	public User(String email, String phone, String id, String pwd, String nickName, char gender) {
-		this.email = email;
-		this.phone = phone;
-		this.id = id;
-		this.pwd = pwd;
-		this.nickName = nickName;
-		this.gender = gender;
-	}
-
-	
 	public String getEmail() {
 		return email;
 	}
@@ -47,12 +37,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getPwd() {
-		return pwd;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getNickName() {
@@ -71,26 +61,17 @@ public class User {
 		this.gender = gender;
 	}
 
-
-	public String toString() {
-		return "User [email=" + email + ", phone=" + phone + ", id=" + id + ", pwd=" + pwd + ", nickName=" + nickName
-				+ ", gender=" + gender + "]";
+	public List<Video> getVideos() {
+		return videos;
 	}
-	
-	
-	
-	
-	
-	// 로그인
-//	Create (생성): 데이터베이스에 새로운 데이터를 만들거나 추가합니다.     //회원가입
 
-//	Read   (읽기): 데이터베이스에서 데이터를 조회하고 읽습니다.          //프로필보기
+	public void setVideos(List<Video> videos) {
+		this.videos = videos;
+	}
 
-//	Update (갱신): 데이터베이스에 저장된 데이터를 업데이트하거나 수정합니다. //프로필수정
-
-//	Delete (삭제): 데이터베이스에서 데이터를 삭제합니다.               //계정삭제
 	
 	
-
 	
 }
+
+

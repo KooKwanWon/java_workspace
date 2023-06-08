@@ -1,4 +1,13 @@
-//package com.kakaotalk.model;
+package com.kakaotalk.model;
+
+
+
+
+
+
+
+
+
 //
 //import java.util.Scanner;
 //

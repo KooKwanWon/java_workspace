@@ -1,12 +1,9 @@
 package com.kh.practice3.controller;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Set;
-import java.util.Map.Entry;
 
 import com.kh.practice3.model.Farm;
 
@@ -17,14 +14,17 @@ public class FarmController {
 
 	public boolean addNewKind(Farm f, int amount) {
 
-		hMap.put(f, amount);
+		Set<Farm> key = hMap.keySet();
+//		if(hMap.containsKey(f)); hMap에 포함할 때 // for문을 쓸 필요 없음
+//		f일때 key를 hMap에서 포함
 
-		if (true) {
-
-			return true;
+		for (Farm farm : key) {
+			if (farm.getName().equals(f.getName())) {
+				return false;
+			}
 		}
-
-		return false;
+		hMap.put(f, amount);
+		return true;
 
 	}
 
@@ -35,15 +35,14 @@ public class FarmController {
 		for (Farm farm : key) {
 			if (farm.getName().equals(f.getName())) {
 				hMap.remove(farm);
-				System.out.println("농산물 삭제에 성공하였습니다.");
+
+				return true;
 			}
 		}
-
 		// 전달 받은 f가 hMap 안에 key로 존재할 때
 		// hMap에 f 삭제 후 true 반환
 
 		// 존재하지 않을 경우 false 반환
-
 		return false;
 	}
 
@@ -53,14 +52,12 @@ public class FarmController {
 
 		for (Farm farm : key) {
 			if (farm.getName().equals(f.getName())) {
-				hMap.remove(farm);
-				hMap.put(f, amount);
-				System.out.println("농산물 수량이 수정되었습니다.");
+
+				hMap.put(f, amount); // 키 값이 같으면 중복x (덮어 씌움)
 				return true;
 			}
-				System.out.println("농산물 수량 수정에 실패하였습니다. 다시 입력해주세요.");
 		}
-		
+
 		// 전달 받은 f가 hMap 안에 key로 존재할 때
 		// f와 amount 저장 후 true 반환
 
@@ -72,8 +69,6 @@ public class FarmController {
 	public HashMap<Farm, Integer> printFarm() {
 
 		Set<Farm> key = hMap.keySet();
-
-		Collection<Integer> value = hMap.values();
 
 		Iterator<Farm> it = key.iterator();
 		while (it.hasNext()) {
@@ -90,18 +85,14 @@ public class FarmController {
 
 		Set<Farm> key = hMap.keySet();
 
-		Collection<Integer> value = hMap.values();
-		
 		int a = 0;
-		int i = 0;
 		for (Farm farm : key) {
-			if (farm.getName().equals(f.getName()) && hMap.get(farm)!=0) {
-				a = hMap.get(farm) -1 ;
-				hMap.put(f, a); 
+			if (farm.getName().equals(f.getName()) && hMap.get(farm) != 0) {
+				a = hMap.get(farm) - 1;
+				hMap.put(f, a);
 //								
 				list.add(f);
-				i++;
-				
+
 				return true;
 			}
 		}
@@ -115,6 +106,16 @@ public class FarmController {
 
 	public boolean removeFarm(Farm f) {
 
+		int a = 0;
+		for (Farm farm : list) {
+			if (farm.equals(f)) {
+				list.remove(farm);
+				a = hMap.get(farm) + 1;
+				hMap.put(f, a);
+				return true;
+			}
+		}
+
 		// 전달 받은 f가 list에 존재할 때
 		// list에 f 삭제, 그리고 hMap에 f 수량 1 증가, true 반환
 
@@ -124,11 +125,11 @@ public class FarmController {
 	}
 
 	public ArrayList<Farm> printBuyFarm() {
-		
+
 		for (Farm farm : list) {
-			System.out.println(farm); 
+			System.out.println(farm);
 		}
-		
+
 		return list;
 	}
 }

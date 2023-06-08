@@ -1,36 +1,60 @@
 package com.kakaotalk.controller;
+import com.kakaotalk.controller.*;
 
-import com.kakaotalk.model.Friend;
-
+import java.util.HashMap;
+import java.util.Set;
 
 public class FriendController {
+	
+	UserController uc = new UserController();
+	
+	public HashMap list(HashMap a) {
+		
+		
+	
+	return a;
+//		}
+	
+	}
+}
 
-	private Friend f = new Friend();
-	
-	public FriendController() {}
-	
-	public boolean saveData(Friend f) {
-		
-		this.f.setF_list(f.getF_list());
-		this.f.setFname(f.getFname());
-		this.f.setMenuchoice(f.getMenuchoice());
-		this.f.setChoice(f.getChoice());
-		this.f.setAdd(f.getAdd());
-		this.f.setAdd_line(f.getAdd_line());
-		this.f.setD_line(f.getD_line());
-		
-		return true;
-	}
-	
-	public Friend confirmData() {
-	
-		return this.f;
-	}
-	
-	public void Sum() {
-		
-		System.out.println(f.getF_list() + f.getFname());
-	}
+
+
+
+
+
+
+
+//
+//
+//public class FriendController {
+//
+//	private Friend f = new Friend();
+//	
+//	public FriendController() {}
+//	
+//	public boolean saveData(Friend f) {
+//		
+//		this.f.setF_list(f.getF_list());
+//		this.f.setFname(f.getFname());
+//		this.f.setMenuchoice(f.getMenuchoice());
+//		this.f.setChoice(f.getChoice());
+//		this.f.setAdd(f.getAdd());
+//		this.f.setAdd_line(f.getAdd_line());
+//		this.f.setD_line(f.getD_line());
+//		
+//		return true;
+//	}
+//	
+//	public Friend confirmData() {
+//	
+//		return this.f;
+//	}
+//	
+//	public void Sum() {
+//		
+//		System.out.println(f.getF_list() + f.getFname());
+//	}
 //	
 //	public void f_menu() {
 //
@@ -119,4 +143,4 @@ public class FriendController {
 //	
 
 	
-}
+//}
