@@ -1,29 +1,45 @@
 package com.kakaotalk.controller;
+
 import com.kakaotalk.controller.*;
+import com.kakaotalk.model.Friend;
+import com.kakaotalk.model.User;
 
 import java.util.HashMap;
 import java.util.Set;
 
 public class FriendController {
-	
-	UserController uc = new UserController();
-	
-	public HashMap list(HashMap a) {
-		
-		
-	
-	return a;
-//		}
-	
+
+	private HashMap<String, Friend> map = new HashMap<>();
+
+	public void addFriendList(String id, Friend f) {
+
+		Set<String> key = map.keySet();
+
+		map.put(id, f);
+
 	}
+
+	public String viewFriendList(String id) {
+		
+		String temp = "";
+		Set<String> key = map.keySet();
+		for (String string : key) {
+			if(id.equals(string)) {
+				temp += "";
+			}
+			else {
+				temp += "[" + map.get(string).getNickName() + "] [상태 메시지 : "
+						+ map.get(string).getProfileMsg() + "] \n";
+				} 
+					
+		}
+		return temp;
+
+	}
+	
+	
+
 }
-
-
-
-
-
-
-
 
 //
 //
@@ -142,5 +158,4 @@ public class FriendController {
 //	}
 //	
 
-	
 //}

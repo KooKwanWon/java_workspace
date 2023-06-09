@@ -1,14 +1,73 @@
 package com.kakaotalk.model;
 
 import java.util.Arrays;
+import java.util.Objects;
 
+public class Friend {
+	
+	private String nickName;
+	private String profileMsg;
+	private String img = "[프로필 사진]";
+	
+	public Friend() {
+	}
+	
+	public Friend(String nickName, String profileMsg, String img) {
+		this.nickName = nickName;
+		this.profileMsg = profileMsg;
+		this.img = img;
+	}
 
+	public String getNickName() {
+		return nickName;
+	}
 
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
 
+	public String getProfileMsg() {
+		return profileMsg;
+	}
 
+	public void setProfileMsg(String profileMsg) {
+		this.profileMsg = profileMsg;
+	}
 
+	public String getImg() {
+		return img;
+	}
 
+	public void setImg(String img) {
+		this.img = img;
+	}
 
+	@Override
+	public String toString() {
+		return "Friend [nickName=" + nickName + ", profileMsg=" + profileMsg + ", img=" + img + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(img, nickName, profileMsg);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Friend other = (Friend) obj;
+		return Objects.equals(img, other.img) && Objects.equals(nickName, other.nickName)
+				&& Objects.equals(profileMsg, other.profileMsg);
+	}
+
+	
+	
+}
 
 //
 //public class Friend {
@@ -103,8 +162,7 @@ import java.util.Arrays;
 //
 //	
 //	
-	
-	
+
 //	public void f_menu() {
 //
 //		System.out.print("[친구] 원하는 메뉴를 선택해 주세요" + "\n" + " 1.친구목록  2.친구관리  3.전체 메뉴로 가기 : ");
