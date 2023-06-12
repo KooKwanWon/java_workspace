@@ -1,44 +1,77 @@
 package com.kakaotalk.controller;
 
-import com.kakaotalk.controller.*;
 import com.kakaotalk.model.Friend;
-import com.kakaotalk.model.User;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
 public class FriendController {
 
 	private HashMap<String, Friend> map = new HashMap<>();
-
+	private HashMap<String, ArrayList<Friend>> list = new HashMap<>();
+	private ArrayList<Friend> arrayList1 = new ArrayList<>();
+	
 	public void addFriendList(String id, Friend f) {
 
 		Set<String> key = map.keySet();
 
 		map.put(id, f);
-
-	}
-
-	public String viewFriendList(String id) {
 		
-		String temp = "";
-		Set<String> key = map.keySet();
-		for (String string : key) {
-			if(id.equals(string)) {
-				temp += "";
-			}
-			else {
-				temp += "[" + map.get(string).getNickName() + "] [상태 메시지 : "
-						+ map.get(string).getProfileMsg() + "] \n";
-				} 
-					
-		}
-		return temp;
+		arrayList1.add(f);
 
+	}
+
+	public void viewFriendList(String id) {
+		Set<String> key = map.keySet();
+		
+		list.put(id, arrayList1);
+		
+		
+		for (Friend person : list.get(id)) {
+			if(person.equals(map.get(id))){
+				}
+			else
+            System.out.println("친구 : " + person );
+			
+        }
+	}
+	
+	public void changeProfile(String id, String img, String profileMsg) {
+	
+		arrayList1.remove(map.get(id));
+		
+		map.get(id).setImg(img);
+		map.get(id).setProfileMsg(profileMsg);
+		
+		arrayList1.add(map.get(id));
+		
+		list.put(id, arrayList1);
+		
+	}
+	
+	public void changeNickName(String id, String newName) {
+		arrayList1.remove(map.get(id));
+		
+		map.get(id).setNickName(newName);
+		
+		arrayList1.add(map.get(id));
+		
+		list.put(id, arrayList1);
+	}
+	
+	public void viewFriendBirth(String id) {
+					
+		for (Friend person : list.get(id)) {
+			if(person.equals(map.get(id))){
+				}
+			else
+            System.out.println(person.getNickName() + "님의 생일 : " + person.getBirth());
+			
+        }
 	}
 	
 	
-
 }
 
 //

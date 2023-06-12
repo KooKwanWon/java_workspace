@@ -3,6 +3,7 @@ package com.kh.stream.terminal;
 import java.util.Arrays;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
+import java.util.stream.IntStream;
 
 /*
  * 기본 집계
@@ -59,6 +60,14 @@ public class B_Aggregate {
 		OptionalInt findFirst = Arrays.stream(array).findFirst();
 		System.out.println("첫 번째 값 : " + findFirst.getAsInt());
 		
+		
+		
+		Arrays.stream(array).filter(value -> value % 2 == 0).reduce((x,y) -> x*y).ifPresent(value -> System.out.println(value));
+		
+		IntStream stream = Arrays.stream(array);
+		IntStream filter = stream.filter(value -> value % 2 == 0);
+		OptionalInt reduce = filter.reduce((x, y) -> x*y);
+		System.out.println(reduce.getAsInt());
 	}
 
 }

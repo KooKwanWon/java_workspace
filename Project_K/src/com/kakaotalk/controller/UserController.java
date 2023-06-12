@@ -25,6 +25,7 @@ public class UserController {
 		return true;
 	}
 	
+
 	public String login(String id, String password) {
 		
 		/*
@@ -86,8 +87,11 @@ public class UserController {
 		 * 전달 받은 id를 통해 Member의 이름을 새로 입력한 이름으로 변경
 		 * 
 		 * */
+	
+	
+		
 		map.get(id).setNickName(newName);
-		System.out.println("이름 변경에 성공하였습니다.");
+		System.out.println("닉네임 변경에 성공하였습니다.");
 		
 
 	}
@@ -95,107 +99,22 @@ public class UserController {
 	
 	public void viewProfile(String id) {
 		
-			System.out.println("========== 내 프로필 ==========");
-			System.out.print("[" + map.get(id).getImg() + "] ");
+			System.out.println("========================= 내 프로필 =========================");
+			System.out.print("[내 Id : " + id + "] ");
+			System.out.print("[『 " + map.get(id).getImg() + " 』] ");
 			System.out.print("[" + map.get(id).getNickName() + "] ");
 			System.out.println("[상태메시지 : " + map.get(id).getProfileMsg() + "]");
-			System.out.println("============================");
+			System.out.println("===========================================================");
 									
 	}
 	
-	public HashMap idList() {
+	public Set<String> idList() {
 	
+		Set<String> key = map.keySet();
 		
-		
-			return map;
+			return key;
 		
 	}
 }
 
 
-
-
-
-
-
-
-
-
-//
-//public class UserController {
-//
-//
-//	User user = null;
-//	
-//	public boolean login(String id, String password) { // 로그인
-//		if(user!=null && user.getId().equals(id) 
-//				  && user.getPassword().equals(password)) {
-//			return true;
-//		}
-//		return false;
-//	}
-//
-//	
-//	public void signUp(User user) { // 회원가입
-//		this.user = user;
-//	}
-//	
-//private HashMap<String, Member> map = new HashMap<>();
-//	
-//	User user = null;
-//	
-//	public boolean login(String id, String password) { // 로그인
-//		if(user!=null && user.getId().equals(id) 
-//				  && user.getPassword().equals(password)) {
-//			return true;
-//		}
-//		return false;
-//	}
-//	
-//	public void signUp(String id, Member m) { // 회원가입
-//		Set<String> key = map.keySet();
-//		
-//		for (String idcheck : key) {
-//			if(id.equals(idcheck)){
-//				
-//				return false;
-//			}
-//		}
-//		map.put(id, m);
-//		return true;
-//		
-//	}
-//
-//	public void signUp() {
-//
-//		
-//
-//	}
-//
-//	
-//	public User viewProfile() { // 프로필 보기 (로그인 된 경우)
-//		
-//		if(login(user.getId(), user.getPassword())) {
-//			return user;
-//		}
-//		return null;
-//	}
-//
-//	
-//	public User updateProfile(User user) { // 프로필 수정 (로그인 된 경우)
-//		if(login(this.user.getId(), this.user.getPassword())) {
-//			this.user = user;
-//		}
-//		return this.user;
-//	}
-//
-//
-//	public void deleteProfile(String id) { // 계정 삭제
-//		if(user.getId().equals(id)) {
-//			user = null;
-//		}
-//	}
-//	
-//	
-//	
-//}

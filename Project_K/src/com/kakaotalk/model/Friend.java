@@ -6,51 +6,103 @@ import java.util.Objects;
 public class Friend {
 	
 	private String nickName;
-	private String profileMsg;
-	private String img = "[프로필 사진]";
+	private String profileMsg = "없음";
+	private String img = "기본 프로필 사진";
+	private String birth;
 	
+	
+
 	public Friend() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+
 	
-	public Friend(String nickName, String profileMsg, String img) {
+
+
+	public Friend(String nickName, String profileMsg, String img, String birth) {
+		super();
 		this.nickName = nickName;
 		this.profileMsg = profileMsg;
 		this.img = img;
+		this.birth = birth;
 	}
+
+	
+
+
 
 	public String getNickName() {
 		return nickName;
 	}
 
+
+
+
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
+
+
+
 
 	public String getProfileMsg() {
 		return profileMsg;
 	}
 
+
+
+
 	public void setProfileMsg(String profileMsg) {
 		this.profileMsg = profileMsg;
 	}
+
+
+
 
 	public String getImg() {
 		return img;
 	}
 
+
+
+
 	public void setImg(String img) {
 		this.img = img;
 	}
 
+
+
+
+	public String getBirth() {
+		return birth;
+	}
+
+
+
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+
+
+
 	@Override
 	public String toString() {
-		return "Friend [nickName=" + nickName + ", profileMsg=" + profileMsg + ", img=" + img + "]";
+		return "[" + img + "] " + "[" + nickName + "] " + "[상태메시지 : " + profileMsg + "]";
 	}
+
+
+
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(img, nickName, profileMsg);
+		return Objects.hash(birth, img, nickName, profileMsg);
 	}
+
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -61,9 +113,12 @@ public class Friend {
 		if (getClass() != obj.getClass())
 			return false;
 		Friend other = (Friend) obj;
-		return Objects.equals(img, other.img) && Objects.equals(nickName, other.nickName)
-				&& Objects.equals(profileMsg, other.profileMsg);
+		return Objects.equals(birth, other.birth) && Objects.equals(img, other.img)
+				&& Objects.equals(nickName, other.nickName) && Objects.equals(profileMsg, other.profileMsg);
 	}
+
+	
+	
 
 	
 	

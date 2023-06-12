@@ -7,41 +7,25 @@ public class User {
 
 	private String password ;
 	private char gender;
+	private String birth;
 	private String nickName ;
-	private String profileMsg ;
-	private String email ;
+	private String profileMsg = "내용없음";
 	private String phone ;
-	private String img = "[프로필 사진]";
+	private String img = "기본 프로필 사진";
 	
 	public User() {
 	}
 
-	public User(char gender, String nickName, String password, String profileMsg, String email,
-			String phone, String img) {
-		
-		this.gender = gender;
-		this.nickName = nickName;
+	public User(String password, char gender, String birth, String nickName, String profileMsg, String phone,
+			String img) {
+		super();
 		this.password = password;
+		this.gender = gender;
+		this.birth = birth;
+		this.nickName = nickName;
 		this.profileMsg = profileMsg;
-		this.email = email;
 		this.phone = phone;
 		this.img = img;
-	}
-
-	public char getGender() {
-		return gender;
-	}
-
-	public void setGender(char gender) {
-		this.gender = gender;
-	}
-
-	public String getNickName() {
-		return nickName;
-	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
 	}
 
 	public String getPassword() {
@@ -52,20 +36,36 @@ public class User {
 		this.password = password;
 	}
 
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public String getBirth() {
+		return birth;
+	}
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
 	public String getProfileMsg() {
 		return profileMsg;
 	}
 
 	public void setProfileMsg(String profileMsg) {
 		this.profileMsg = profileMsg;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getPhone() {
@@ -86,13 +86,13 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "Member [gender=" + gender + ", nickName=" + nickName + ", password=" + password
-				+ ", profileMsg=" + profileMsg + ", email=" + email + ", phone=" + phone + ", img=" + img + "]";
+		return "User [password=" + password + ", gender=" + gender + ", birth=" + birth + ", nickName=" + nickName
+				+ ", profileMsg=" + profileMsg + ", phone=" + phone + ", img=" + img + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(email, gender, img, nickName, password, phone, profileMsg);
+		return Objects.hash(birth, gender, img, nickName, password, phone, profileMsg);
 	}
 
 	@Override
@@ -104,11 +104,12 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equals(email, other.email) && gender == other.gender && Objects.equals(img, other.img)
+		return Objects.equals(birth, other.birth) && gender == other.gender && Objects.equals(img, other.img)
 				&& Objects.equals(nickName, other.nickName) && Objects.equals(password, other.password)
 				&& Objects.equals(phone, other.phone) && Objects.equals(profileMsg, other.profileMsg);
 	}
 
+	
 	
 }	
 
