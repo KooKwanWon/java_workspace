@@ -11,7 +11,7 @@ public class ChattClient {
 
 	public static void main(String[] args) {
 		try {
-			Socket socket = new Socket("192.168.10.43", 60000);
+			Socket socket = new Socket("192.168.10.44", 60000);
 			System.out.println("서버와 연결되었습니다..");
 			
 			Thread sendThread = new SendThread(socket);
